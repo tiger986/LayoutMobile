@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    overflow: hidden;
+}
+
+.box{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.box > *{
+    width: 100%;
+}
+header,footer{
+    height: 44px;
+    background-color: blueviolet;
+}
+main{
+    flex: 1;
+    background-color: #eee;
+}
+section{
+    flex: 2;
+    background-color: antiquewhite;
+}

@@ -1,0 +1,296 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    padding: 0 0 50px 0;
+}
+i{
+    display: block;
+    width: 400px;
+    height: 40px;
+    margin: 50px auto 0;
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center; 
+}
+b{
+    display: block;
+    width: 400px;
+    height: 40px;
+    margin: 30px auto 0;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+}
+.div1{
+    width: 300px;
+    height: 90px;
+    margin: 0 auto;
+    background-color: aquamarine;
+}
+.div2{
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
+    background-color: aquamarine;
+}
+p{
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid red;
+}
+.box1{
+    display: flex;
+    flex-direction: row; /*默认*/ /*定义主轴的方向*/
+}
+.box2{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.box3{
+    display: flex;
+    flex-direction: column;
+}
+.box4{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.box5{
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: nowrap; /*默认*/ /*定义项目到达容器边界是否换行*/
+}
+.box6{
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+}
+.box7{
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap-reverse;
+}
+.box8{
+    display: flex;
+    flex-direction: row; 
+    justify-content: flex-start; /*默认*/ /*定义项目在主轴上的对齐方式*/
+}
+.box9{
+    display: flex;
+    flex-direction: row; 
+    justify-content: flex-end;
+}
+.box10{
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+}
+.box11{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+}
+.box12{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-around;
+}
+.box13{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-around;
+    align-items: flex-start; /*默认*/ /*定义项目在交叉轴上的对齐方式*/
+}
+.box14{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-around;
+    align-items: flex-end;
+}
+.box15{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-around;
+    align-items: center;
+}
+.box16{
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start; /*默认*/ /*定义多根主轴线的对齐方式，若只有一根主轴线则该属性不起作用*/ 
+    /*在有多根主轴线的情况下，此属性与align-items效果一样，只是align-items没有space-between和space-around这两个属性值*/
+}
+.box17{
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-end;
+}
+.box18{
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+.box19{
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-between;
+}
+.box20{
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+}
+
+/*项目属性flex:数字(当属性值只有一个数字时就是flex-grow)规定了项目在主轴方向上分配到的容器剩余空间的比列，这个比例 = 项目的flex属性值 / 参与分配的所有项目的felx属性值的总和*/
+/*flex是felx-grow、flex-shrink和flex-basis的缩写（默认值为0 1 auto）*/
+.box21{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.item1{
+    flex: 1;
+    height: 30px;
+    background-color: blue;
+}
+.item2{
+    flex: 1;
+    height: 30px;
+    background-color: gold;
+}
+.item3{
+    flex: 1;
+    height: 30px;
+    background-color: green;
+}
+.box22{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.item0{
+    width: 30px;
+    height: 50px;
+    background-color: black;
+}
+.item4{
+    width: 30px;
+    flex: 1;
+    background-color: blue;
+}
+.item5{
+    width: 30px;
+    flex: 2;
+    background-color: gold;
+}
+.item6{
+    width: 30px;
+    flex: 3;
+    background-color: green;
+}
+
+.box23{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.box23 p:nth-child(1){
+    order: 2    /*定义项目的排列顺序，值越小，排列越靠前，默认值为0*/
+}
+.box23 p:nth-child(3){
+    order: -1
+}
+
+.box24{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.item7{
+    width: 50px;
+    flex-grow: 0; /*当项目有剩余空间时项目的放大比例（默认值为1），比例算法与flex属性相同，设置为0的项目不放大*/
+    height: 30px;
+    background-color: blue;
+}
+.item8{
+    width: 50px;
+    flex-grow: 1;
+    height: 30px;
+    background-color: gold;
+}
+.item9{
+    width: 50px;
+    flex-grow: 2;
+    height: 30px;
+    background-color: green;
+}
+
+.box25{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.item10{
+    width: 200px;
+    flex-shrink: 0; /*当容器空间不足时项目的缩小比例（默认值为1），设置为0的项目不缩小*/
+    height: 30px;
+    background-color: blue;
+}
+.item11{
+    width: 200px;
+    flex-shrink: 1;
+    height: 30px;
+    background-color: gold;
+}
+.item12{
+    width: 200px;
+    flex-shrink: 1;
+    height: 30px;
+    background-color: green;
+}
+
+.box26{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.item13{
+    width: 20px;
+    /* flex-basis: auto; */
+    flex-basis: 200px; /*当容器的其他项目分配剩余空间时要留出给该项目的空间尺寸再进行分配（默认值是auto,即该元素原来的尺寸(被定义好的尺寸或内容撑起的尺寸)）*/
+    height: 30px;
+    background-color: blue;
+}
+.item14{
+    flex-grow: 1;
+    height: 30px;
+    background-color: gold;
+}
+.item15{
+    flex-grow: 2;
+    height: 30px;
+    background-color: green;
+}
+
+.box27{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.box27 p:nth-child(3){
+    align-self: flex-start; /*可覆盖容器的align-items属性，定义该项目在交叉轴上的对齐方式（默认值为auto），当设置为auto时，则继承父容器的align-items的属性，*/
+}

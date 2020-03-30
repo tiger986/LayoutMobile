@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    overflow: hidden;
+}
+html{
+    /* font-size: 100px; */
+    font-size: 26.666667vw; /*当前手机宽度为375px,则1vw=3.75px,那么100px就等于26.666667vm*/
+}
+ul, li{
+    list-style: none;
+}
+
+.container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+header, footer{
+    height: 0.44rem;
+    background-color: cadetblue;
+}
+header{
+    font-size: 0.18rem;
+    color: white;
+    line-height: 0.44rem;
+    text-align: center;
+    font-weight: 100;
+}
+main{
+    flex: 1;
+    overflow-y: auto;
+    background-color: #eee;
+}
+.text{
+    width: 40%;
+    height: 0.2rem;
+    font-size: 0.16rem;
+    color: black;
+    line-height: 0.2rem;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 0.2rem auto 0.1rem;
+}
+main ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0.05rem;
+}
+main ul li{
+    width: 50%;
+    padding: 0 0.05rem;
+    margin-top: 0.1rem;
+}
+main ul li img{
+    width: 100%;
+}
+footer ul{
+    display: flex;
+}
+footer ul li{
+    height: 0.44rem;
+    flex: 1;
+    font-size: 0.16rem;
+    color: white;
+    line-height: 0.44rem;
+    text-align: center;
+}
